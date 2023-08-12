@@ -1,0 +1,53 @@
+﻿@model IEnumerable<Azure_Web_App_Project.Models.Employee>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Crud Operations</h1>
+
+<p>
+    <a asp-action="Create" type="button" class="btn btn-primary">Create New Employee</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.EmpCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EmpName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Designation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Salary)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmpCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmpName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Designation)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Salary)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id" type="button" class="btn btn-primary" style="padding: 1px 10px;">Edit</a>
+                <a asp-action="Details" asp-route-id="@item.Id" type="button" class="btn btn-secondary" style="padding: 1px 10px;">Details</a>
+                <a asp-action="Delete" asp-route-id="@item.Id" type="button" class="btn btn-danger" style="padding: 1px 10px;">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

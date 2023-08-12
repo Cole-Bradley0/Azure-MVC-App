@@ -1,0 +1,10 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <p><h3 class="display-10">Welcome to this C# web app running on Azure in Docker.</h3>
+        <h3 class="display-10">It follows MVC and uses an Azure SQL server.</h3>
+    </p><br>
+    <p><button type="button" class="btn btn-primary" onclick="location.href='@Url.Action("Index", "Employee")'">Try CRUD Operations</button></p>
+</div>
