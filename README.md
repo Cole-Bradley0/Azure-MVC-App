@@ -1,4 +1,4 @@
-# Azure MVC App running in Docker on Azure using an Azure SQL Server
+# .NET MVC App running in Docker on Azure using an Azure SQL Server
 
 The goal of this project was to get a simple app with CRUD Operations to run entirely on Azure inside a container for continuous deployment.
 I used a container registry for Docker on Azure, an Azure SQL server, and hosted it as an Azure Web App.
